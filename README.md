@@ -23,7 +23,7 @@ Notice that the boardID is `nano168`.
 
 ## Install arduino_168 device
 
-Download arduino_168.mext and install the new device by drag-n-dropping it into mBlock IDE window. You should see a new folder `$HOME/mblock/exts/arduino_168`
+Download [arduino_168.mext](./arduino_168.mext) and install the new device by drag-n-dropping it into mBlock IDE window. You should see a new folder `$HOME/mblock/exts/arduino_168`
 Note that deviceID is `arduino_168`. You can unzip `arduino_168.mext` and look inside `index.js`
 
 ## Repack and install extensions for arduino_168
