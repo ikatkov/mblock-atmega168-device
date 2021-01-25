@@ -1,4 +1,4 @@
-# How to add an Arduino device into [Makeblock](https://www.makeblock.com/) IDE
+# How to add an Arduino device into [MakeBlock](https://www.makeblock.com/) IDE
 
 This is an example for Atmega168.
 
@@ -27,6 +27,17 @@ Notice that the boardID is `nano168`.
 
 Download [arduino_168.mext](./arduino_168.mext) and install the new device by drag-n-dropping it into mBlock IDE window. You should see a new folder `$HOME/mblock/exts/arduino_168`
 Note that deviceID is `arduino_168`. You can unzip `arduino_168.mext` and look inside `index.js`
+
+The same way you configure your own device in https://ext.mblock.cc/. Either create a device from scratch (see official documentation) or tweak an existing one. For tweaking you need to have a device in `.mext` file. 
+
+Example - download the [arduino_168.mext](./arduino_168.mext) click on "My device" in https://ext.mblock.cc, import the extension file. Edit it to your liking. Most critical parts are "Connection settings" -> "Connectivity settings" -> "baudRate" and "Basic information" -> "ID"
+Give your device an unique ID. Note that this is the ID that C compiler and linker use to find command line arguments. Update `/Applications/Makeblock/mBlock.app/Contents/Resources/app/mlink-v1/platforms/arduino/boards.js` as needed. 
+This is the same ID that extension files are mapped to. In other words, once you create a new device ID, you will need to create (copy) your own ecosystem of extension for it. Otherwise nothing will show up in the "Extension center"
+
+Another examples to tweak
+
+
+Once you are done - click "Save" at the bottom and "Download" button on the top right. Download the extension file - `*.mext`. Install the new extension by drag-n-dropping it into mBlock IDE window. 
 
 The new device shows up in the device library.
 ![screenshot](mBlock_v5_3_0.jpg)
