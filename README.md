@@ -21,7 +21,7 @@ The full file will look like
 ```
 module.exports={uno:{args:"-mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR",linkArgs:"-mmcu=atmega328p",variants:"standard",staticLib:"libmbot.a",rootDir:"mbot"},mega:{args:"-mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR",linkArgs:"-mmcu=atmega2560",variants:"mega",staticLib:"libranger.a",rootDir:"ranger"},leonardo:{args:"-mmcu=atmega32u4 -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_LEONARDO -DARDUINO_ARCH_AVR",linkArgs:"-mmcu=atmega32u4",variants:"leonardo",staticLib:"libleonardo.a",rootDir:"leonardo"},micro:{args:"-mmcu=atmega32u4 -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_MICRO -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x8037",linkArgs:"-mmcu=atmega32u4",variants:"micro",staticLib:"libmicro.a",rootDir:"micro"},yun:{args:"-mmcu=atmega32u4 -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_YUN -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x8041",linkArgs:"-mmcu=atmega32u4",variants:"yun",staticLib:"libyun.a",rootDir:"yun"},nano:{args:"-mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR",linkArgs:"-mmcu=atmega328p",variants:"eightanaloginputs",staticLib:"libnano.a",rootDir:"nano"},nano168:{args:"-mmcu=atmega168 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR",linkArgs:"-mmcu=atmega168",variants:"eightanaloginputs",staticLib:"libnano.a",rootDir:"nano"}};
 ```
-Notice that the boardID is `nano168`.
+Notice that the boardID is that we will be adding below is `nano168`.
 
 ## Install arduino_168 device
 
@@ -34,8 +34,12 @@ Example - download the [arduino_168.mext](./arduino_168.mext) click on "My devic
 Give your device an unique ID. Note that this is the ID that C compiler and linker use to find command line arguments. Update `/Applications/Makeblock/mBlock.app/Contents/Resources/app/mlink-v1/platforms/arduino/boards.js` as needed. 
 This is the same ID that extension files are mapped to. In other words, once you create a new device ID, you will need to create (copy) your own ecosystem of extension for it. Otherwise nothing will show up in the "Extension center"
 
+![screenshot](mBlock_extension-center.jpg)
+
 Another examples to tweak
 
+* [arduino nano](./arduino_nano_v0.1.3_abe46cba.mext) 
+* [arduino uno](./arduino_uno_v0.4.9_0ea4da04.mext) 
 
 Once you are done - click "Save" at the bottom and "Download" button on the top right. Download the extension file - `*.mext`. Install the new extension by drag-n-dropping it into mBlock IDE window. 
 
