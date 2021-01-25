@@ -1,4 +1,6 @@
-# Arduino Atmega168 device into makeblock IDE
+# How to add Arduinodevice into [Makeblock](https://www.makeblock.com/) IDE
+
+This is an example for Atmega168.
 
 ## Hack boards.js
 
