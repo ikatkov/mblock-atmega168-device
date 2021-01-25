@@ -1,4 +1,4 @@
-# How to add Arduinodevice into [Makeblock](https://www.makeblock.com/) IDE
+# How to add an Arduino device into [Makeblock](https://www.makeblock.com/) IDE
 
 This is an example for Atmega168.
 
