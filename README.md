@@ -53,7 +53,15 @@ Every extension for mBlock5 is a zip archive with the `.mext` suffix. List of al
 
 In theory, if you can zip existing extension into a `.mext` localy, no need to go via the route below, A `.mext` file is a zip that has `fat32` file structure insiude with compression turned off. I could not find a way to compress a folder into a binary that the MakeBlock IDE would understand.
 
-Open `$HOME/mblock/exts/ext.json` and lookup .mext file URL for the extension you want. Download it. Open https://ext.mblock.cc/ , click on "My extension" and import the extension file. Click to edit the newly imported extension. Go to "Advanced configuration". Edit "Support device/sprite" section. Add new device - `arduino_168`. Remove all other devices. Click "Save" at the bottom and "Download" button on the top right. Download the extension file - `*.mext`. Install the new extension by drag-n-dropping it into mBlock IDE window. 
+Open `$HOME/mblock/exts/ext.json` and lookup .mext file URL for the extension you want. 
+
+Alternatively do this
+
+```
+cat ext.json | jq '.[] | {id, mFileUrl}'
+```
+
+Grab .mext file URL and download the file. Open https://ext.mblock.cc/ , click on "My extension" and import the extension file. Click to edit the newly imported extension. Go to "Advanced configuration". Edit "Support device/sprite" section. Add new device - `arduino_168`. Remove all other devices. Click "Save" at the bottom and "Download" button on the top right. Download the extension file - `*.mext`. Install the new extension by drag-n-dropping it into mBlock IDE window. 
 
 Repeat same steps for all other extensions.
 
